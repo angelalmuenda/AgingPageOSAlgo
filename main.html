@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="resources/main.css">
+<script type="text/javascript" src="resources/main.js"></script>
+<title>Simulation - Aging Page Replacement Algorithm</title>
+
+<html>
+
+<body onload="initialize()">
+
+    <h1>Aging Page Replacement Algorithm</h1>
+    <h2>Simulation</h2>
+
+    <p>
+        <label>Page Size:</label>
+        <input id="page-size" type="number" value="3" min="3" max="10" onchange="pageSizeValue()" />
+
+        <label>Aging Bit Size:</label>
+        <input id="aging-bit-size" type="number" value="4" min="4" max="8" onchange="agingBitSizeValue()" />
+    </p>
+
+    <p>Page List:
+        <input type="radio" name="pages-type" value="random" id="random" checked="checked">Random
+        <input type="radio" name="pages-type" value="defined" id="defined">Pre-defined
+    </p>
+
+    <p id="pages-list-pre-p">Pre-defined pages list:<br>
+        <textarea rows="6" cols="50" id="pages-list-pre" readonly>
+        </textarea>
+    </p>
+    <p>
+        <button id='start' onclick="startSim()">Start</button>
+        <button id='pause' onclick="pauseSim()" disabled>Pause</button>
+        <button id='continue' onclick="continueSim()" disabled>Continue</button>
+        <button id='reset' onclick="resetSim()" disabled>Reset</button>
+    </p>
+
+    <p>
+        <label>Current Page</label>
+        <input id="next-page" type="number" readonly/>
+    </p>
+
+    <table id='sim-table'>
+        <tr>
+            <th>Container</th>
+            <th>Page</th>
+            <th>R-Bit</th>
+            <th>Binary Bit Counter</th>
+            <th>Decimal Bit Counter</th>
+	    <th>Time Last Accessed</th>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <p>Old pages list:</p>
+    <textarea rows="6" cols="50" id="pages-list" readonly>
+    </textarea>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <p>Submitted by: Alcantara, Almuenda, Vasquez</p>
+    <p>Simulation created by Almuenda</p>
+
+</body>
+
+</html>
